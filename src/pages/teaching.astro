@@ -1,0 +1,186 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Teaching | Md. Farhatul Abrar"
+  description="Courses taught by Md. Farhatul Abrar in the Department of Chemical Engineering, BUET."
+>
+  <main class="page">
+    <h1>Teaching</h1>
+
+    <section class="course-group">
+      <h2>Theory Courses</h2>
+      <ul class="course-list">
+        <li>
+          <div class="course-row">
+            <span class="course-title">ChE 303 — Mass Transfer I</span>
+            <span class="course-credits">3.0 credits</span>
+          </div>
+          <p class="course-desc">
+            Covers equilibrium-stage separations, including binary
+            distillation, gas-liquid absorption, and solvent extraction.
+          </p>
+        </li>
+        <li>
+          <div class="course-row">
+            <span class="course-title">ChE 401 — Reaction Engineering</span>
+            <span class="course-credits">3.0 credits</span>
+          </div>
+          <p class="course-desc">
+            Covers chemical kinetics, ideal reactor design, and
+            heterogeneous catalysis for homogeneous and heterogeneous
+            reaction systems.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="course-group">
+      <h2>Sessional/ Laboratory Courses</h2>
+      <ul class="course-list">
+        <li>
+          <div class="course-row">
+            <span class="course-title"
+              >ChE 202 — Material and Energy Balance Sessional</span
+            >
+            <span class="course-credits">1.5 credits</span>
+          </div>
+          <p class="course-desc">
+            Problem-solving sessional based on the Material and Energy
+            Balance course.
+          </p>
+        </li>
+        <li>
+          <div class="course-row">
+            <span class="course-title"
+              >ChE 208 — Computer Programming and Applications</span
+            >
+            <span class="course-credits">1.5 credits</span>
+          </div>
+          <p class="course-desc">
+            Introduces computer programming (Python) and computer-aided data
+            analysis (MS Excel) for chemical engineering problems.
+          </p>
+        </li>
+        <li>
+          <div class="course-row">
+            <span class="course-title"
+              >ChE 304 — Chemical Engineering Laboratory III</span
+            >
+            <span class="course-credits">1.5 credits</span>
+          </div>
+          <p class="course-desc">
+            Laboratory work based on Heat Transfer and Mass Transfer I & II
+            coursework.
+          </p>
+        </li>
+        <li>
+          <div class="course-row">
+            <span class="course-title"
+              >ChE 308 — Chemical Process Analysis Sessional</span
+            >
+            <span class="course-credits">1.5 credits</span>
+          </div>
+          <p class="course-desc">
+            Process description and calculations across industries,
+            including fertilizers, cement, and petrochemicals.
+          </p>
+        </li>
+        <li>
+          <div class="course-row">
+            <span class="course-title"
+              >ChE 310 — Computational Techniques in Chemical
+              Engineering</span
+            >
+            <span class="course-credits">1.5 credits</span>
+          </div>
+          <p class="course-desc">
+            Numerical methods for algebraic, transcendental, and
+            differential equations, applied to chemical engineering design
+            and optimization.
+          </p>
+        </li>
+        <li>
+          <div class="course-row">
+            <span class="course-title"
+              >ChE 402 — Chemical Engineering Laboratory V</span
+            >
+            <span class="course-credits">1.5 credits</span>
+          </div>
+          <p class="course-desc">
+            Laboratory work based on reaction engineering, 
+            fuel and petroleum product analysis, and process control systems.
+          </p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <style>
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 120px;
+    }
+
+    h1 {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 40px;
+      letter-spacing: -0.01em;
+    }
+
+    .course-group {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0 0 22px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .course-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .course-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 6px;
+    }
+
+    .course-title {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 1.02rem;
+    }
+
+    .course-credits {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .course-desc {
+      font-size: 1rem;
+      line-height: 1.75;
+      margin: 0;
+      color: var(--text);
+      text-align: justify;
+    }
+  </style>
+</Layout>

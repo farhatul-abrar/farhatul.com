@@ -1,0 +1,142 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="About | Md. Farhatul Abrar"
+  description="Md. Farhatul Abrar is a Lecturer in Chemical Engineering at BUET, working on hydrothermal carbonization, life-cycle assessment, and multiscale process modeling."
+>
+  <main class="page">
+    <h1>About</h1>
+
+    <p class="bio">
+      I am a Lecturer in Chemical Engineering at Bangladesh University of
+      Engineering and Technology (BUET). My research background is in
+      hydrothermal carbonization and life-cycle assessment of waste-to-energy
+      processes. I am now expanding my research into multiscale process
+      modeling and molecular simulation, with a current focus on reactive
+      molecular dynamics using LAMMPS and ReaxFF. My broader goal is to
+      connect molecular-level chemistry with process-scale optimization to
+      enable more sustainable process design.
+    </p>
+
+    <section>
+      <h2>Education</h2>
+      <ul class="entry-list">
+        <li>
+          <div class="entry-row">
+            <span class="entry-title">M.Sc. in Chemical Engineering</span>
+            <span class="entry-date">January 2025</span>
+          </div>
+          <span class="entry-meta"
+            >Bangladesh University of Engineering and Technology (BUET)</span
+          >
+        </li>
+        <li>
+          <div class="entry-row">
+            <span class="entry-title">B.Sc. in Chemical Engineering</span>
+            <span class="entry-date">May 2023</span>
+          </div>
+          <span class="entry-meta"
+            >Bangladesh University of Engineering and Technology (BUET)</span
+          >
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Academic Experience</h2>
+      <ul class="entry-list">
+        <li>
+          <div class="entry-row">
+            <span class="entry-title">Lecturer</span>
+            <span class="entry-date">May 2025 – Present</span>
+          </div>
+          <span class="entry-meta"
+            >Department of Chemical Engineering, BUET</span
+          >
+        </li>
+        <li>
+          <div class="entry-row">
+            <span class="entry-title">Research Assistant</span>
+            <span class="entry-date">July 2023 – December 2024</span>
+          </div>
+          <span class="entry-meta"
+            >Department of Chemical Engineering, BUET</span
+          >
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <style>
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px 24px 120px;
+    }
+
+    h1 {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 32px;
+      letter-spacing: -0.01em;
+    }
+
+    .bio {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin: 0 0 56px;
+      text-align: justify;
+    }
+
+    section {
+      margin-bottom: 44px;
+    }
+
+    h2 {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .entry-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .entry-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .entry-title {
+      font-weight: 500;
+      font-size: 1.02rem;
+    }
+
+    .entry-date {
+      font-family: var(--font-head);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .entry-meta {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 2px;
+    }
+  </style>
+</Layout>

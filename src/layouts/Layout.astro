@@ -1,0 +1,212 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+
+const nav = [
+  { label: "About", href: "/about" },
+  { label: "Research", href: "/research" },
+  { label: "Publications", href: "/publications" },
+  { label: "Teaching", href: "/teaching" },
+  { label: "CV", href: "/cv" },
+];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="wordmark" href="/">Farhatul Abrar</a>
+
+      <nav class="nav">
+        {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+      </nav>
+
+      <a class="contact-link" href="/contact">Contact</a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <nav class="mobile-nav" id="mobile-nav">
+      {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+      <a href="/contact">Contact</a>
+    </nav>
+
+    <slot />
+
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const mobileNav = document.getElementById("mobile-nav");
+
+      toggle?.addEventListener("click", () => {
+        const isOpen = mobileNav?.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", String(!!isOpen));
+        toggle.classList.toggle("open", !!isOpen);
+      });
+
+      mobileNav?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileNav.classList.remove("open");
+          toggle?.setAttribute("aria-expanded", "false");
+          toggle?.classList.remove("open");
+        });
+      });
+    </script>
+
+    <style is:global>
+      :root {
+        --bg: #fafaf8;
+        --text: #171717;
+        --text-muted: #666666;
+        --accent: #315c72;
+        --accent-light: #e8eff2;
+        --border: #e5e5e2;
+        --font-head: "Manrope", sans-serif;
+        --font-body: "Source Serif 4", serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1150px;
+        margin: 0 auto;
+        padding: 28px 24px;
+        font-family: var(--font-head);
+      }
+
+      .wordmark {
+        font-weight: 700;
+        font-size: 1rem;
+        letter-spacing: 0.02em;
+        color: var(--text);
+        text-decoration: none;
+      }
+
+      .nav {
+        display: flex;
+        gap: 28px;
+      }
+
+      .nav a,
+      .contact-link {
+        color: var(--text);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      .nav a:hover,
+      .contact-link:hover {
+        color: var(--accent);
+      }
+
+      /* Hamburger button — hidden on desktop */
+      .menu-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 32px;
+        height: 32px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+      }
+
+      .menu-toggle span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: var(--text);
+        border-radius: 2px;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      .menu-toggle.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .menu-toggle.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      /* Mobile dropdown nav — hidden by default, even on mobile, until opened */
+      .mobile-nav {
+        display: none;
+        flex-direction: column;
+        max-width: 1150px;
+        margin: 0 auto;
+        padding: 0 24px;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.25s ease;
+      }
+
+      .mobile-nav.open {
+        max-height: 400px;
+        padding-bottom: 20px;
+      }
+
+      .mobile-nav a {
+        color: var(--text);
+        text-decoration: none;
+        font-family: var(--font-head);
+        font-weight: 500;
+        font-size: 1rem;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      @media (max-width: 640px) {
+        .nav,
+        .contact-link {
+          display: none;
+        }
+        .menu-toggle {
+          display: flex;
+        }
+        .mobile-nav {
+          display: flex;
+        }
+      }
+    </style>
+  </body>
+</html>

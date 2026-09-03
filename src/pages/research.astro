@@ -1,0 +1,106 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Research | Md. Farhatul Abrar"
+  description="Research by Md. Farhatul Abrar on sustainable energy, waste valorization, life-cycle assessment, and process systems engineering."
+>
+  <main class="page">
+    <h1>Research</h1>
+
+    <p class="intro">
+      My work sits at the intersection of waste valorization, environmental
+      assessment, and process systems engineering — with a growing focus on
+      connecting molecular-scale chemistry to process-scale design
+      decisions.
+    </p>
+
+    <section class="theme">
+      <h2>Sustainable Energy &amp; Waste Valorization</h2>
+      <p>
+        I work on converting waste streams — including bio-slurry, municipal
+        solid waste, and agricultural residues — into usable energy and
+        materials through thermochemical processes such as hydrothermal
+        carbonization (HTC), hydrothermal liquefaction (HTL), and pyrolysis.
+        My work on bio-slurry HTC involved optimizing operating conditions
+        (temperature, residence time) using Response Surface Methodology to
+        maximize hydrochar yield and heating value.
+      </p>
+    </section>
+
+    <section class="theme">
+      <h2>Life Cycle Assessment</h2>
+      <p>
+        I evaluate the environmental performance of waste valorization and
+        energy processes through Life Cycle Assessment (LCA), comparing
+        pathways such as hydrothermal carbonization against conventional
+        disposal methods. This work extends to comparative and
+        process-level LCA across a range of materials and technologies,
+        including biochar, phase-change materials, and hydrogels.
+      </p>
+    </section>
+
+    <section class="theme">
+      <h2>Process Systems Engineering &amp; Multiscale Modeling</h2>
+      <p>
+        I'm expanding into process systems engineering and multiscale
+        modeling — including superstructure-based frameworks for process
+        and technology selection, and reactive molecular dynamics (using
+        LAMMPS and ReaxFF) to study the chemistry underlying thermochemical
+        conversion. The goal is to connect molecular-level mechanisms with
+        process-scale optimization for more sustainable process design.
+      </p>
+    </section>
+  </main>
+
+  <style>
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px 24px 120px;
+    }
+
+    h1 {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 24px;
+      letter-spacing: -0.01em;
+    }
+
+    .intro {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin: 0 0 56px;
+      text-align: justify;
+    }
+
+    .theme {
+      margin-bottom: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .theme:first-of-type {
+      padding-top: 0;
+      border-top: none;
+    }
+
+    h2 {
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 14px;
+      letter-spacing: -0.005em;
+    }
+
+    .theme p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin: 0;
+      text-align: justify;
+    }
+  </style>
+</Layout>

@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Md. Farhatul Abrar | Chemical Engineering | BUET"
+  description="Md. Farhatul Abrar is a Lecturer in Chemical Engineering at Bangladesh University of Engineering and Technology (BUET), working on sustainable energy, life-cycle assessment, and process systems engineering."
+>
+  <main class="hero">
+    <div class="photo-frame" aria-hidden="true"></div>
+
+    <h1>Md. Farhatul Abrar</h1>
+    <p class="role">Lecturer, Chemical Engineering &middot; BUET</p>
+
+    <p class="interests">
+      Sustainable Energy &middot; Life Cycle Assessment &middot; Process
+      Systems Engineering &middot; Optimization &middot; Waste Valorization
+    </p>
+
+    <div class="cta-row">
+      <a class="cta" href="/research">Research</a>
+      <a class="cta" href="/publications">Publications</a>
+      <a class="cta" href="/cv">CV</a>
+    </div>
+  </main>
+
+  <style>
+    .hero {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 120px;
+      text-align: center;
+    }
+
+    .photo-frame {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      border: 1px solid var(--border);
+      margin: 0 auto 36px;
+    }
+
+    h1 {
+      font-family: var(--font-head);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0 0 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .role {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin: 0 0 32px;
+    }
+
+    .interests {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin: 0 auto 44px;
+      max-width: 560px;
+    }
+
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .cta {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: #fff;
+      background: var(--accent);
+      padding: 12px 24px;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</Layout>

@@ -1,0 +1,129 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const links = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/farhatulabrar/" },
+  {
+    label: "Google Scholar",
+    href: "https://scholar.google.com/citations?user=cqm9I9UAAAAJ&hl=en",
+  },
+  {
+    label: "ResearchGate",
+    href: "https://www.researchgate.net/profile/Md-Farhatul-Abrar-2?ev=hdr_xprf",
+  },
+];
+---
+
+<Layout
+  title="Contact | Md. Farhatul Abrar"
+  description="Contact information for Md. Farhatul Abrar, Lecturer in Chemical Engineering at BUET."
+>
+  <main class="page">
+    <h1>Contact</h1>
+
+    <div class="contact-card">
+      <p class="name">Md. Farhatul Abrar</p>
+      <p class="role">Lecturer</p>
+      <p class="dept">Department of Chemical Engineering</p>
+      <p class="dept">Bangladesh University of Engineering and Technology</p>
+      <p class="location">Dhaka, Bangladesh</p>
+
+      <div class="emails">
+        <a href="mailto:abrar@che.buet.ac.bd">abrar@che.buet.ac.bd</a>
+        <a href="mailto:farhatul.abrar@gmail.com">farhatul.abrar@gmail.com</a>
+      </div>
+
+      <div class="profile-links">
+        {
+          links.map((link) => (
+            <a href={link.href} target="_blank" rel="noopener noreferrer">
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </main>
+
+  <style>
+    .page {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 40px 24px 120px;
+    }
+
+    h1 {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 40px;
+      letter-spacing: -0.01em;
+    }
+
+    .contact-card {
+      padding: 36px 0 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .name {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin: 0 0 6px;
+    }
+
+    .role,
+    .dept,
+    .location {
+      margin: 0 0 2px;
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .location {
+      margin-bottom: 28px;
+    }
+
+    .emails {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .emails a {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      color: var(--accent);
+      text-decoration: none;
+      width: fit-content;
+    }
+
+    .emails a:hover {
+      text-decoration: underline;
+    }
+
+    .profile-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .profile-links a {
+      font-family: var(--font-head);
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .profile-links a:hover {
+      background: var(--accent-light);
+      border-color: var(--accent-light);
+    }
+  </style>
+</Layout>
