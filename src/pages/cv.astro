@@ -9,7 +9,7 @@ import Layout from "../layouts/Layout.astro";
   <main class="page">
     <div class="cv-header">
       <h1>Curriculum Vitae</h1>
-      <a class="download-btn" href="/CV_Md_Farhatul_Abrar.pdf" target="_blank" rel="noopener noreferrer">
+      <a class="download-btn" href="/CV_Abrar_Md_Farhatul.pdf" target="_blank" rel="noopener noreferrer">
         Download Full CV (PDF)
       </a>
     </div>
@@ -44,7 +44,7 @@ import Layout from "../layouts/Layout.astro";
         <li>
           <div class="entry-row">
             <span class="entry-title">Lecturer</span>
-            <span class="entry-date">May 2025 – Present</span>
+            <span class="entry-date">April 2025 – Present</span>
           </div>
           <span class="entry-meta">Department of Chemical Engineering, BUET</span>
         </li>
@@ -63,26 +63,55 @@ import Layout from "../layouts/Layout.astro";
       <ul class="research-list">
         <li>
           <span class="research-title"
-            >Research Assistant, <a href="https://seer-group.org/" target="_blank" rel="noopener noreferrer">SEER Group</a>, BUET</span
+            >Reactive Molecular Dynamics of Hydrothermal Carbonization
+            &middot; Oct 2025 – Present</span
+          >
+          <p>
+            ReaxFF simulations in LAMMPS of a 2,232-atom cellobiose–water
+            system under HTC conditions (180–240&nbsp;&deg;C). Completed
+            500&nbsp;ps runs at 180&nbsp;&deg;C and 240&nbsp;&deg;C, with
+            preliminary bond-order analysis of C–O bond dynamics.
+          </p>
+        </li>
+        <li>
+          <span class="research-title"
+            >Graduate Research Assistant, <a href="https://seer-group.org/" target="_blank" rel="noopener noreferrer">SEER Group</a>, BUET
+            &middot; Jul 2023 – Dec 2024</span
           >
           <p>
             Valorization of bio-slurry from anaerobic digestion via
-            hydrothermal carbonization — LCA modeling, bio-slurry/HTC
-            product characterization, and RSM-based process optimization.
+            hydrothermal carbonization. Attributional LCA of four digestate
+            management pathways in openLCA with Monte Carlo uncertainty
+            analysis (HTC cut climate change impact by 70% versus open
+            dumping), and RSM optimization of HTC temperature and residence
+            time.
+          </p>
+        </li>
+        <li>
+          <span class="research-title"
+            >Research Collaboration, Florida Institute of Technology
+            &middot; 2024 – 2025</span
+          >
+          <p>
+            Conducted the LCA component of a combined techno-economic and
+            life cycle study of pyrolyzed hydrochar production from waste
+            corn stover, which showed 40.7% lower greenhouse gas emissions
+            than open-field burning.
           </p>
         </li>
         <li>
           <span class="research-title">M.Sc. Thesis</span>
           <p>
             Life Cycle Assessment of Anaerobic Digestate Valorization
-            through Hydrothermal Carbonization.
+            through Hydrothermal Carbonization. Supervisor: Prof. Kawnish
+            Kirtania.
           </p>
         </li>
         <li>
           <span class="research-title">Undergraduate Thesis</span>
           <p>
             CFD Simulation of a Natural Convection Mixed-mode Solar Dryer
-            using OpenFOAM.
+            using OpenFOAM. Supervisor: Prof. Kawnish Kirtania.
           </p>
         </li>
       </ul>
@@ -92,8 +121,8 @@ import Layout from "../layouts/Layout.astro";
     <section>
       <h2>Publications</h2>
       <p class="summary-text">
-        1 published journal article, 1 conference presentation, 3
-        manuscripts under review, and 3 manuscripts in preparation.
+        2 published journal articles, 2 manuscripts under review, 3
+        manuscripts in preparation, and 1 conference presentation.
       </p>
       <a class="section-link" href="/publications">See full publication list →</a>
     </section>
@@ -102,9 +131,33 @@ import Layout from "../layouts/Layout.astro";
       <h2>Teaching</h2>
       <p class="summary-text">
         2 theory courses and 6 sessional/laboratory courses in the
-        Department of Chemical Engineering, BUET.
+        Department of Chemical Engineering, BUET. Co-supervised two
+        undergraduate thesis groups (four students); currently
+        co-supervising two more.
       </p>
       <a class="section-link" href="/teaching">See all courses →</a>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <dl class="skills-list">
+        <div>
+          <dt>Modeling &amp; Simulation</dt>
+          <dd>LAMMPS, OpenFOAM, Aspen Plus, Aspen HYSYS, openLCA</dd>
+        </div>
+        <div>
+          <dt>Programming &amp; Data Analysis</dt>
+          <dd>Python, MATLAB, Design-Expert, Minitab</dd>
+        </div>
+        <div>
+          <dt>Experimental</dt>
+          <dd>
+            High-pressure stirred reactor, bomb calorimeter, elemental
+            analyzer, FTIR, UV-Vis spectrophotometer, atomic absorption
+            spectrophotometer
+          </dd>
+        </div>
+      </dl>
     </section>
 
     <section>
@@ -133,12 +186,25 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <span class="entry-meta">Awarded for four consecutive years</span>
         </li>
+        <li>
+          <div class="entry-row">
+            <span class="entry-title">First Runner-Up, National Laminaire Competition</span>
+            <span class="entry-date">2018</span>
+          </div>
+        </li>
       </ul>
     </section>
 
     <section>
-      <h2>Professional Activities</h2>
+      <h2>Leadership &amp; Service</h2>
       <ul class="entry-list">
+        <li>
+          <div class="entry-row">
+            <span class="entry-title">Co-Organizer, Small-Scale Chemistry Workshop for Teachers</span>
+            <span class="entry-date">2025</span>
+          </div>
+          <span class="entry-meta">BUET–IUPAC</span>
+        </li>
         <li>
           <div class="entry-row">
             <span class="entry-title">In-Plant Trainee</span>
@@ -284,6 +350,27 @@ import Layout from "../layouts/Layout.astro";
       font-size: 1rem;
       line-height: 1.75;
       text-align: justify;
+    }
+
+    .skills-list {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .skills-list dt {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 0 0 2px;
+    }
+
+    .skills-list dd {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.97rem;
+      line-height: 1.7;
     }
 
     .summary-text {
