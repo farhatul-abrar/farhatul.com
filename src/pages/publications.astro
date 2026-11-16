@@ -21,19 +21,15 @@ const profiles = [
   <main class="page">
     <h1>Publications</h1>
 
-    <p class="profiles">
-      <span class="profiles-label">Profiles:</span>
+    <div class="profile-links">
       {
-        profiles.map((p, i) => (
-          <>
-            {i > 0 && <span class="sep">&middot;</span>}
-            <a href={p.href} target="_blank" rel="noopener noreferrer">
-              {p.label}
-            </a>
-          </>
+        profiles.map((p) => (
+          <a href={p.href} target="_blank" rel="noopener noreferrer">
+            {p.label}
+          </a>
         ))
       }
-    </p>
+    </div>
 
     <section class="pub-group">
       <h2>Published</h2>
@@ -139,25 +135,27 @@ const profiles = [
       letter-spacing: -0.01em;
     }
 
-    .profiles {
-      font-family: var(--font-head);
-      font-size: 0.95rem;
-      margin: 0 0 40px;
-      color: var(--text-muted);
+    .profile-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px 10px;
-      align-items: baseline;
+      gap: 12px;
+      margin: 0 0 40px;
     }
 
-    .profiles a {
-      color: var(--accent);
-      text-decoration: none;
+    .profile-links a {
+      font-family: var(--font-head);
+      font-size: 0.92rem;
       font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
     }
 
-    .profiles a:hover {
-      text-decoration: underline;
+    .profile-links a:hover {
+      background: var(--accent-light);
+      border-color: var(--accent-light);
     }
 
     .pub-group {
