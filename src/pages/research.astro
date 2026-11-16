@@ -4,52 +4,85 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout
   title="Research | Md. Farhatul Abrar"
-  description="Research by Md. Farhatul Abrar on sustainable energy, waste valorization, life-cycle assessment, and process systems engineering."
+  description="Research by Md. Farhatul Abrar on reactive molecular simulation, hydrothermal conversion of waste and biomass, life-cycle assessment, and process systems engineering."
 >
   <main class="page">
     <h1>Research</h1>
 
     <p class="intro">
-      My work sits at the intersection of waste valorization, environmental
-      assessment, and process systems engineering — with a growing focus on
-      connecting molecular-scale chemistry to process-scale design
-      decisions.
+      My research asks why some waste-conversion processes perform better
+      than others, and how that understanding can guide better process
+      design. I work on hydrothermal conversion of waste and biomass, assess
+      it with life cycle and techno-economic analysis, and am building
+      toward molecular-level modeling of reaction mechanisms and kinetics. I
+      aim to extend this toward the catalytic conversion of biomass and
+      waste-derived feedstocks.
     </p>
 
     <section class="theme">
-      <h2>Sustainable Energy &amp; Waste Valorization</h2>
+      <h2>Molecular Simulation &amp; Reaction Chemistry</h2>
       <p>
-        I work on converting waste streams — including bio-slurry, municipal
-        solid waste, and agricultural residues — into usable energy and
-        materials through thermochemical processes such as hydrothermal
-        carbonization (HTC), hydrothermal liquefaction (HTL), and pyrolysis.
-        My work on bio-slurry HTC involved optimizing operating conditions
-        (temperature, residence time) using Response Surface Methodology to
-        maximize hydrochar yield and heating value.
+        Statistical optimization and life cycle assessment can show which
+        conditions work better, but not why. To study the chemistry
+        directly, I am using reactive molecular dynamics (LAMMPS with
+        ReaxFF). I built a 2,232-atom cellobiose&ndash;water system matching
+        experimental hydrothermal carbonization conditions and have completed
+        500 ps simulations at 180&nbsp;&deg;C and 240&nbsp;&deg;C, with
+        preliminary bond-order analysis of C&ndash;O bond dynamics and
+        possible hydrolysis-related transformations. This work is at an early
+        stage. My goal is to connect molecular-level mechanisms with reaction
+        kinetics and process-scale models, and to build the computational
+        foundations for studying catalytic reaction pathways. This direction
+        also builds on my teaching of Reaction Engineering, which covers
+        chemical kinetics and heterogeneous catalysis.
       </p>
     </section>
 
     <section class="theme">
-      <h2>Life Cycle Assessment</h2>
+      <h2>Hydrothermal Conversion of Waste &amp; Biomass</h2>
       <p>
-        I evaluate the environmental performance of waste valorization and
-        energy processes through Life Cycle Assessment (LCA), comparing
-        pathways such as hydrothermal carbonization against conventional
-        disposal methods. This work extends to comparative and
-        process-level LCA across a range of materials and technologies,
-        including biochar, phase-change materials, and hydrogels.
+        I work on hydrothermal conversion of waste-derived feedstocks,
+        including hydrothermal carbonization (HTC) and liquefaction (HTL). In
+        my M.Sc. research on anaerobic digestate, I ran HTC experiments,
+        characterized the hydrochar, and used Response Surface Methodology to
+        optimize temperature (180&ndash;240&nbsp;&deg;C) and residence time
+        (30&ndash;90&nbsp;min) for hydrochar yield and heating value. These
+        objectives pull in opposite directions, so the optimization had to
+        balance them. The joint optimum was near 190&nbsp;&deg;C and
+        90&nbsp;min, giving a hydrochar yield of 64.2% and a heating value of
+        18.9&nbsp;MJ/kg.
       </p>
     </section>
 
     <section class="theme">
-      <h2>Process Systems Engineering &amp; Multiscale Modeling</h2>
+      <h2>Life Cycle &amp; Techno-Economic Assessment</h2>
       <p>
-        I'm expanding into process systems engineering and multiscale
-        modeling — including superstructure-based frameworks for process
-        and technology selection, and reactive molecular dynamics (using
-        LAMMPS and ReaxFF) to study the chemistry underlying thermochemical
-        conversion. The goal is to connect molecular-level mechanisms with
-        process-scale optimization for more sustainable process design.
+        I use life cycle assessment (LCA) to compare conversion pathways and
+        identify their environmental hotspots. For anaerobic digestate, I
+        compared open dumping, land application, composting, and HTC, using
+        Monte Carlo simulation to test how uncertain inventory data affect
+        the ranking. HTC cut climate change impact by 70% relative to open
+        dumping. In a collaboration with Florida Institute of Technology, I
+        conducted the LCA component of a combined techno-economic and life
+        cycle study of hydrochar production from waste corn stover. It showed
+        40.7% lower greenhouse gas emissions than open-field burning and
+        identified the HTC reactor as the main hotspot. I have also
+        contributed LCA studies on municipal solid waste, phase-change
+        materials on biochar, and hydrogels.
+      </p>
+    </section>
+
+    <section class="theme">
+      <h2>Process Systems Engineering</h2>
+      <p>
+        I am interested in evaluating process configurations under competing
+        objectives. I have worked on process-network generation and modular
+        LCA for comparing production pathways, and on a framework for a
+        biorefinery process repository and superstructure generation to
+        support LCA-based decision making (in preparation). Earlier, I
+        modeled heat transfer and airflow in a natural-convection solar dryer
+        using CFD in OpenFOAM, which was my introduction to computational
+        modeling.
       </p>
     </section>
   </main>
